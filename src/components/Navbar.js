@@ -3,6 +3,7 @@ import {SocialItems} from "./SocialItems"
 import {useState} from 'react'
 import navlogo from "../imgs/nav_logo.png"
 import './NavBar.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Navbar = () => {
     const [clicked, setclicked] = useState(false)
@@ -22,16 +23,19 @@ const Navbar = () => {
                         </li>
                     )
                 })}
+            </ul>
+            <ul className={clicked ? 'social-menu' : 'social-menu-active'}>
                 {SocialItems.map((item, index) => {
                     return(
                         <li key = {index}>
                             <a className = {item.cName} href = {item.url}>
-                                {item.title}
+                            <FontAwesomeIcon icon={item.img} />
                             </a>
                         </li>
                     )
                 })}
             </ul>
+
         </div>
     )
 }

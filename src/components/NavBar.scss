@@ -20,6 +20,7 @@ $spg_dark_color: #0000009b;
 
 .menu-icon {
     color: white;
+    position: absolute;
 }
 
 .nav-menu {
@@ -57,17 +58,30 @@ $spg_dark_color: #0000009b;
     transition: text-decoration-color 300ms, text-underline-offset 300ms;
 }
 
-.nav-links:hover {
-    text-decoration-color: rgba(0, 0, 255, 1);
-    text-underline-offset: 0.4em;
+// .nav-links:hover {
+//     text-decoration-color: rgba(0, 0, 255, 1);
+//     text-underline-offset: 0.4em;
+// }
+
+.social-menu-active {
+    color: white;
+    //display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 10px;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: absolute;
+    right: 0px;
+    text-decoration: none;
 }
 
 .social-links {
-    color: rgb(255, 255, 255);
+    color: white;
     display: grid;
-    grid-template-columns: repeat(10, auto);
+    grid-template-columns: repeat(5, auto);
+    position: sticky;
     text-decoration: none;
-    justify-content: right;
-    align-items: right;
-    padding-right: 10px;
 }
